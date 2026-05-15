@@ -1,4 +1,5 @@
 
+import BookingCard from '@/components/BookingCard';
 import { DeleteAlert } from '@/components/DeleteAlert';
 import { EditModal } from '@/components/EditModal';
 import { Button } from '@heroui/react';
@@ -21,11 +22,11 @@ const DestinationDetailsPage = async ({ params }) => {
 
     // console.log(destinationDetails);
     return (
-        <div className=' max-w-7xl mx-auto mt-10'>
-        <div className=' flex items-center justify-end gap-3'>
-            <EditModal destination = {destinationDetails} />
-        <DeleteAlert destination = {destinationDetails} />
-        </div>
+        <div className=' max-w-7xl mx-auto mt-10 mb-10'>
+            <div className=' flex items-center justify-end gap-3'>
+                <EditModal destination={destinationDetails} />
+                <DeleteAlert destination={destinationDetails} />
+            </div>
 
 
             <Image className=' w-full h-100 object-cover '
@@ -35,29 +36,30 @@ const DestinationDetailsPage = async ({ params }) => {
                 height={500}
             />
 
-            <div>
-                <div className=' flex items-center gap-1 text-gray-500 mt-2'>
-                    <LuMapPin /> <span>{country}</span>
-                </div>
+            <div className=' flex justify-between'>
+                <div className='p-2  max-w-3xl'>
+                    <div className=' flex items-center gap-1 text-gray-500 mt-2'>
+                        <LuMapPin /> <span>{country}</span>
+                    </div>
 
-                <div className=' flex justify-between items-center'>
-                    <div>
+                    <div className=' flex justify-between items-center'>
                         <div>
-                            <h2 className='text-2xl font-bold mt-4'>{destinationName}</h2>
+                            <div>
+                                <h2 className='text-2xl font-bold mt-4'>{destinationName}</h2>
+                            </div>
+                            <div className=' flex items-center gap-1 text-gray-500 mb-3'>
+                                <SlCalender /> <span className=' text-gray-500'>{duration}</span>
+                            </div>
                         </div>
-                        <div className=' flex items-center gap-1 text-gray-500 mb-3'>
-                            <SlCalender /> <span className=' text-gray-500'>{duration}</span>
-                        </div>
+                        
                     </div>
-                    <div>
-                        <p className=' text-2xl font-bold'>${price}</p>
-                    </div>
-                </div>
-                <h1 className='text-2xl font-bold mt-6'>Overview</h1>
-                <p className=' text-gray-600 mt-4'>{description}</p>
+                    <h1 className='text-2xl font-bold mt-6'>Overview</h1>
+                    <p className=' text-gray-600 mt-4'>{description}</p>
 
-                <h1 className='text-2xl font-bold mt-6'>Highlights</h1>
-                 <p className=' text-gray-600 mt-4'>{description}</p>
+                    <h1 className='text-2xl font-bold mt-6'>Highlights</h1>
+                    <p className=' text-gray-600 mt-4'>{description}</p>
+                </div>
+            <BookingCard destinationDetails={destinationDetails} />
             </div>
         </div>
     );

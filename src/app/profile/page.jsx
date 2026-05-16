@@ -9,7 +9,7 @@ import { PiAirplaneTiltLight } from 'react-icons/pi';
 
 const ProfilePage = () => {
     return (
-        <div className=' max-w-7xl mx-auto'>
+        <div className=' max-w-7xl mx-auto items-center justify-center'>
             <div className='mt-10'>
                 <h1 className=' text-4xl font-bold'>My Profile</h1>
                 <p className=' text-gray-500'>Manage your account settings and travel preferences</p>

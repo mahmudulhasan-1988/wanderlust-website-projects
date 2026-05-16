@@ -39,7 +39,7 @@ const SignUpPage = () => {
 
 
     return (
-        <div className='max-w-7xl mx-auto mt-10 mb-10'>
+        <div className='max-w-3xl mx-auto mt-10 mb-10 flex flex-col gap-5 justify-center items-center'>
             <div className='text-center my-3'>
                 <h1 className=' text-4xl font-bold'>Create an Account</h1>
                 <p className='text-lg text-gray-600'>Start your adventure with Wanderlust</p>
@@ -143,7 +143,9 @@ const SignUpPage = () => {
                         Sign Up With Google
                         </Button>
                     </div>
+                    <div className='flex items-center justify-center'>
                         <p>Already have an account?<span className=' text-cyan-500'>Sign In</span></p>
+                    </div>
                         
                 </Form>
             </Card>

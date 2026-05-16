@@ -24,9 +24,9 @@ const AddDestinationPage = () => {
   // --- MongoDB URL: Call the API route to add a new destination END ----
 
   return (
-    <div className='p-5 max-w-4xl mx-auto mt-10 mb-10'>
+    <div className='p-5 max-w-4xl mx-auto mt-10 mb-10 justify-center items-center'>
       <h2 className=' text-2xl font-bold mb-10'>AddDestinationPage</h2>
-      <Card className='border border-gray-300 shadow-2xl'>
+      <Card className='border border-gray-300 shadow-2xl rounded-none'>
         <form
           onSubmit={onSubmit}
           className="p-10 space-y-8 w-3xl mx-auto"
